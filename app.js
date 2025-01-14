@@ -17,6 +17,8 @@ initDb();
 /* ........All routes list........... */
 require("./src/routes/adminEndpoints")(app);
 require("./src/routes/jobEndpoints")(app);
+require("./src/routes/pubEndpoints")(app);
+require("./src/routes/uploadFileOnFirebase")(app);
 
 // Configurer le Cron Job pour s'exécuter tous les jours à minuit
 cron.schedule("0 0 * * *", updateExpiredSubscriptions);

@@ -12,6 +12,7 @@ module.exports = (app) => {
 
       const admin = await Admin.create({
         emailAddress: req.body.emailAddress,
+        nameAndSurname: req.body.nameAndSurname,
         password: hashedPassword,
       });
 

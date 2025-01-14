@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     postedDate: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
     },
     category: {
       type: DataTypes.STRING,
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     mailAdressToApply: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
 
     level: {

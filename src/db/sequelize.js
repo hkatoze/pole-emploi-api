@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require("sequelize");
 
 const JobModel = require("./models/Job");
 const AdminModel = require("./models/Admin");
+const PubModel = require("./models/Pub");
 
 const sequelize = new Sequelize(
   "u235953842_pole_emploi",
@@ -16,6 +17,7 @@ const sequelize = new Sequelize(
 );
 const Admin = AdminModel(sequelize, DataTypes);
 const Job = JobModel(sequelize, DataTypes);
+const Pub = PubModel(sequelize, DataTypes);
 
 const initDb = () => {
   return sequelize.sync().then(() => {
@@ -27,4 +29,5 @@ module.exports = {
   initDb,
   Job,
   Admin,
+  Pub,
 };

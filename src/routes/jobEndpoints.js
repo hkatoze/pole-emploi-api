@@ -39,7 +39,8 @@ module.exports = (app) => {
       })
       .catch((error) => {
         if (error instanceof ValidationError) {
-          return res.status(400).json({ message: error.message });
+          console.log(`${error}`);
+          return res.status(400).json({ message: error });
         }
         const message =
           "L'offre d'emploi n'a pas pu être modifiée. Réessayez dans quelques instants.";
